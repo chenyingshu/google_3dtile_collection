@@ -15,7 +15,7 @@ We refer to the instructions and scripts from and acknowledge the contribution o
 - Merge many texture files into one for an OBJ file: https://github.com/theFroh/imagepacker.
 
 ## Requirements
-- Python
+- Python, Pillow
 - [Blender](https://www.blender.org/) (latest version)
 - Blender Addon [Blosm](https://prochitecture.gumroad.com/l/blender-osm)  (base version)
 - Google 3D Tiles API Key
