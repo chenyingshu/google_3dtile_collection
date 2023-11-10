@@ -39,19 +39,20 @@ For detailed instructions, you can follow https://github.com/vvoovv/blosm/wiki/I
 2. Enter "Directory to store downloaded OpenStreetMap and terrain file" in Blosm addon preference.
 3. (Refer to [Basic Usage](https://github.com/vvoovv/blosm/wiki/Import-of-Google-3D-Cities#basic-usage))
 In project "Layout" tab, open "Blosm" menu UI on the right side panel of the Blender (or toggle by click ``N`` key).
-5. Click `Select`, and open web-based UI to select area by bounding box, I use no more than 0.3km x 0.3km area for quicker download.
-6. Click `copy` from Web and `paste` on Blosm UI panel to paste longitudes and latitudes.
-7. Settings:
+4. Click `Select`, and open web-based UI to select area by bounding box, I use no more than 0.3km x 0.3km area for quicker download.
+5. Click `copy` from Web and `paste` on Blosm UI panel to paste longitudes and latitudes.
+6. Settings:
     - Import: `Google 3D Tiles`
     - Level of details: `buildings with more details`
     - [ ] Join 3D Tiles objects
     - [x] Relative to initial import
-   Disable "Join 3D Tiles objects" for later mesh editing.
-8. Click `import` and wait, we can open terminal to monitor the downloading progress.
+   <br>Disable "Join 3D Tiles objects" for later mesh editing.
+7. Click `import` and wait, we can open terminal to monitor the downloading progress.
+8. Repeat sub-steps 3-7 to get other aligned tiles.
 
 #### STEP 3 - Export OBJ Model
-1. Usually downloaded tiles cover larger area then selected area, please feel free to delete unused tiles.
-2. Change materials:
+1. Usually downloaded tiles cover larger/unexpected area then selected area, please feel free to delete useless tiles.
+2. Change materials: select imported meshes, in Blosm *Tools >Replace materials with* `export-ready`, click `Replace Materials`.
 3. Export and save textures: _Main Menu > File > External Data > Unpack Resources_, in the popup-window
    - For Windows, select "Use files in current directory (create when necessary)"
    - For Linux/Ubuntu, select "Use files in original location (create when necessary)"
