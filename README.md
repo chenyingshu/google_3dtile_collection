@@ -1,5 +1,5 @@
 # Google 3D Tiles Collection
-Use Google Tile API to download models in [3D tiles]() to Blender and export as obj file with texture.
+Use Google Tile API to download models in [3D tiles](https://developers.google.com/maps/documentation/tile/3d-tiles) to Blender and export as an OBJ file with texture.
 
 By using Google 3D Tiles you are bound by
 - [Google’s Terms of Service](http://www.google.com/intl/en/policies/terms)
@@ -12,7 +12,7 @@ By using Google 3D Tiles you are bound by
 ## References
 We refer to the instructions and scripts from and acknowledge the contribution of:
 - Import Google 3D tiles to Blender: https://github.com/vvoovv/blosm/wiki/Import-of-Google-3D-Cities.
-- Merge many texture files into one for an obj file: https://github.com/theFroh/imagepacker.
+- Merge many texture files into one for an OBJ file: https://github.com/theFroh/imagepacker.
 
 ## Requirements
 - Python
@@ -26,8 +26,7 @@ We refer to the instructions and scripts from and acknowledge the contribution o
 ### Import Tiles to Blender
 For detailed instructions, you can follow https://github.com/vvoovv/blosm/wiki/Import-of-Google-3D-Cities.
 
-Steps:
-#### Preparation
+#### STEP 1 - Preparation
 1. Install [Blender](https://www.blender.org/) 
 2. Install [Blosm Addon (base version)](https://prochitecture.gumroad.com/l/blender-osm)  
 3. Get Google 3D Tiles Key [[link]](https://developers.google.com/maps/documentation/tile/get-api-key).
@@ -35,23 +34,45 @@ Steps:
     2. Enter key to "Google 3D Tiles Key" Blosm addon preference.
 4. Enable the Maps Tiles API [[link]](https://developers.google.com/maps/documentation/tile/cloud-setup#enabling-apis).
 
-#### Import and Export Model
-We refer to 
+#### STEP 2 - Import and Export Model
 1. Create a new empty Blender project, enable Blosm addon, and restart Blender (if first time enable addon).
 2. Enter "Directory to store downloaded OpenStreetMap and terrain file" in Blosm addon preference.
 3. (Refer to [Basic Usage](https://github.com/vvoovv/blosm/wiki/Import-of-Google-3D-Cities#basic-usage))
 In project "Layout" tab, open "Blosm" menu UI on the right side panel of the Blender (or toggle by click ``N`` key).
 5. Click `Select`, and open web-based UI to select area by bounding box, I use no more than 0.3km x 0.3km area for quicker download.
-6. Copy on Web and paste on Blosm UI panel longitudes and latitudes.
-   
+6. Click `copy` from Web and `paste` on Blosm UI panel to paste longitudes and latitudes.
+7. Settings:
+    - Import: `Google 3D Tiles`
+    - Level of details: `buildings with more details`
+    - [ ] Join 3D Tiles objects
+    - [x] Relative to initial import
+   Disable "Join 3D Tiles objects" for later mesh editing.
+8. Click `import` and wait, we can open terminal to monitor the downloading progress.
+
+#### STEP 3 - Export OBJ Model
+1. Usually downloaded tiles cover larger area then selected area, please feel free to delete unused tiles.
+2. Change materials:
+3. Export and save textures: _Main Menu > File > External Data > Unpack Resources_, in the popup-window
+   - For Windows, select "Use files in current directory (create when necessary)"
+   - For Linux/Ubuntu, select "Use files in original location (create when necessary)"
+       - There appears duplicate naming in unpacking issue in Linux Blender:
+4. Select necessary tile meshes, _Main Menu > File > Export > Waterfront (.obj)_, in popup-window check _Limit to Selected Only_.
+5. Click `Export Waterfront OBJ` to export textured obj file.
+ 
 ### Merge Multi-Texture into One
-Merge texture images into one, please follow https://github.com/theFroh/imagepacker.
-For example, run: <br>
+#### STEP 4 - Pack Textures into One
+Merge texture images into one and use only one material, please run: <br>
+``python objuvpacker.py [path\_to\_obj\_file.obj] -m [path\_to\_material\_file.mtl] -o [output\_path\_name]
 ``
-python
+<br>
+For example,
+``
+python imagepacker/objubpacker.py XXX.obj
 ``
 
-To use one sole material in obj file, we need to edit obj file by running: <br>
+To preserve original multiple materials in obj file by running: <br>
 ``
-python
+python imagepacker/objubpacker.py XXX.obj --multi-mtl
 ``
+
+Code was adapted from https://github.com/theFroh/imagepacker.
