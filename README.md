@@ -49,6 +49,7 @@ In project "Layout" tab, open "Blosm" menu UI on the right side panel of the Ble
    <br>Disable "Join 3D Tiles objects" for later mesh editing.
 7. Click `import` and wait, we can open terminal to monitor the downloading progress.
 8. Repeat sub-steps 3-7 to get other aligned tiles.
+9. To better view the model online, on the right View panel, set _View > (Clip) End to 10000m_.
 
 #### STEP 3 - Export OBJ Model
 1. Usually downloaded tiles cover larger/unexpected area then selected area, please feel free to delete useless tiles.
