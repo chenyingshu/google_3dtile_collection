@@ -69,12 +69,12 @@ Merge texture images into one and use only one material, please run: <br>
 <br>
 For example,
 ``
-python imagepacker/objubpacker.py XXX.obj
+python imagepacker/objuvpacker.py XXX.obj
 ``
 
 To preserve original multiple materials in obj file by running: <br>
 ``
-python imagepacker/objubpacker.py XXX.obj --multi-mtl
+python imagepacker/objuvpacker.py XXX.obj --multi-mtl
 ``
 
 Code was adapted from https://github.com/theFroh/imagepacker.
