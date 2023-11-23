@@ -39,7 +39,7 @@ For detailed instructions, you can follow https://github.com/vvoovv/blosm/wiki/I
 2. Enter "Directory to store downloaded OpenStreetMap and terrain file" in Blosm addon preference.
 3. (Refer to [Basic Usage](https://github.com/vvoovv/blosm/wiki/Import-of-Google-3D-Cities#basic-usage))
 In project "Layout" tab, open "Blosm" menu UI on the right side panel of the Blender (or toggle by click ``N`` key).
-4. Click `Select`, and open web-based UI to select area by bounding box, I use no more than 0.3km x 0.3km area for quicker download.
+4. Click `Select`, and open web-based UI to select area by bounding box, I use 0.3km x 0.3km to 1.0km x 1.0km area for quicker download.
 5. Click `copy` from Web and `paste` on Blosm UI panel to paste longitudes and latitudes.
 6. Settings:
     - Import: `Google 3D Tiles`
@@ -58,8 +58,12 @@ In project "Layout" tab, open "Blosm" menu UI on the right side panel of the Ble
    - For Windows, select "Use files in current directory (create when necessary)"
    - For Linux/Ubuntu, select "Use files in original location (create when necessary)"
        - There appears duplicate naming in unpacking issue in Linux Blender:
-4. Select necessary tile meshes, _Main Menu > File > Export > Waterfront (.obj)_, in popup-window check _Limit to Selected Only_.
-5. Click `Export Waterfront OBJ` to export textured obj file.
+4. Select necessary tile meshes.
+5. [OPTIONAL] Recommended for some renderer that supports only one mesh.
+   - Press "Ctrl+J" to merge tile meshes into one.
+   - If needed you can rescale the mesh with 0.1 ratio to scale down model size.
+7. _Main Menu > File > Export > Waterfront (.obj)_, in popup-window check _Limit to Selected Only_.
+8. Click `Export Waterfront OBJ` to export textured obj file.
  
 ### Merge Multi-Texture into One
 #### STEP 4 - Pack Textures into One
