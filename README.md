@@ -61,7 +61,7 @@ In project "Layout" tab, open "Blosm" menu UI on the right side panel of the Ble
 4. Select necessary tile meshes.
 5. [OPTIONAL] Recommended for some renderer that supports only one mesh, or small-scale model.
    - Press "Ctrl+J" to merge tile meshes into one.
-   - If needed you can rescale the mesh with 0.1 ratio to scale down model size.
+   - Rescale the mesh with 0.1 ratio to scale down model size.
 7. _Main Menu > File > Export > Waterfront (.obj)_, in popup-window check _Limit to Selected Only_.
 8. Click `Export Waterfront OBJ` to export textured obj file.
  
