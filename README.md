@@ -6,6 +6,8 @@ By using Google 3D Tiles you are bound by
 - [Google Maps Platform Terms of Service](https://cloud.google.com/maps-platform/terms)
 - [Google Privacy Policy](http://www.google.com/policies/privacy)
 
+:fire: **News and Applications** :fire: <br>
+This pipeline and script were used for ECCV 2024 paper [StyleCity: Large-Scale 3D Urban Scenes Stylization](https://www.chenyingshu.com/stylecity3d/), a system that stylizes city models given text and image references :cityscape: :city_sunset: :night_with_stars:.
 
 <!--## Table of Contents-->
 
@@ -68,6 +70,8 @@ In project "Layout" tab, open "Blosm" menu UI on the right side panel of the Ble
  
 ### Merge Multi-Texture into One
 #### STEP 4 - Pack Textures into One
+**Note:** This is inapplicable for files processed with optional Step 3.5. 
+
 Merge texture images into one and use only one material, please run: <br>
 ``python objuvpacker.py [path\_to\_obj\_file.obj] -m [path\_to\_material\_file.mtl] -o [output\_path\_name]
 ``
