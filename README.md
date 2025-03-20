@@ -6,9 +6,10 @@ By using Google 3D Tiles you are bound by
 - [Google Maps Platform Terms of Service](https://cloud.google.com/maps-platform/terms)
 - [Google Privacy Policy](http://www.google.com/policies/privacy)
 
-:fire: **News and Applications** :fire: <br>
-This pipeline and script were used for ECCV 2024 paper [StyleCity: Large-Scale 3D Urban Scenes Stylization](https://www.chenyingshu.com/stylecity3d/), a system that stylizes city models given text and image references :cityscape: :city_sunset: :night_with_stars:.
+:fire: **News and Applications** :fire: 
 
+This pipeline and script were used for ECCV 2024 paper [StyleCity: Large-Scale 3D Urban Scenes Stylization](https://www.chenyingshu.com/stylecity3d/), a system that stylizes city models given text and image references :cityscape: :city_sunset: :night_with_stars:. <br>
+- Example models used in the paper: [[OneDrive]](https://hkustconnect-my.sharepoint.com/:f:/g/personal/ychengw_connect_ust_hk/EhPJh29tjFdFtFEQxQdX1HgB7T8c2hLz-sJbaiEvXwzoUw?e=xduk6g).
 <!--## Table of Contents-->
 
 ## References
